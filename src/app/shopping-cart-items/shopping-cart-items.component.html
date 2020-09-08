@@ -1,0 +1,33 @@
+<table mat-table [dataSource]="itemsInCart" class="mat-elevation-z8">
+  <ng-container matColumnDef="quantity">
+    <th mat-header-cell *matHeaderCellDef>Quantity</th>
+    <td mat-cell *matCellDef="let element">{{ element.quantity }}</td>
+  </ng-container>
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Item</th>
+    <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+  </ng-container>
+  <ng-container matColumnDef="priceAfterTax">
+    <th mat-header-cell *matHeaderCellDef>Price</th>
+    <td mat-cell *matCellDef="let element">
+      {{ element.priceAfterTax | currency }}
+    </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+
+<table mat-table [dataSource]="totalsFromItems" class="mat-elevation-z8">
+  <ng-container matColumnDef="salesTax">
+    <th mat-header-cell *matHeaderCellDef>Sales Tax</th>
+    <td mat-cell *matCellDef="let element">
+      {{ element.salesTax | currency }}
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="total">
+    <th mat-header-cell *matHeaderCellDef>Total</th>
+    <td mat-cell *matCellDef="let element">{{ element.total | currency }}</td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedTotals"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedTotals"></tr>
+</table>

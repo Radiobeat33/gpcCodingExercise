@@ -1,0 +1,14 @@
+<mat-card class="card-width">
+  <mat-card-header>
+    <div mat-card-avatar class="header-image"></div>
+    <mat-card-title>GPC Coding Exercise</mat-card-title>
+    <mat-card-subtitle>Upload your .txt file to begin!</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <input
+      type="file"
+      id="file"
+      (change)="handleFileInput($event.target.files)"
+    />
+  </mat-card-content>
+</mat-card>

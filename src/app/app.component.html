@@ -1,0 +1,6 @@
+<div class="shopping-board-container">
+  <app-text-drop (uploadedText)="setUploadedText($event)"></app-text-drop>
+  <app-shopping-cart-items
+    [textToDisplay]="uploadedText"
+  ></app-shopping-cart-items>
+</div>
