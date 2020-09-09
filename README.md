@@ -10,3 +10,5 @@ Hello GPC! Thanks for taking the time to review my coding exercise! I chose to d
 ## Notes
 
 - I've added txt files for the 3 example inputs provide in the coding exercise instructions. They are located in the "src/app/test-files" folder
+
+![Image of Coding Exercise](https://i.ibb.co/Y7J0j9h/Screen-Shot-2020-09-08-at-2-36-39-AM.png)
