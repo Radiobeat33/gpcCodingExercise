@@ -21,7 +21,6 @@ export class ShoppingCartItemsComponent implements OnInit, OnChanges {
   ngOnInit(): void {}
 
   ngOnChanges(changes: any): void {
-    console.log('change tho', changes);
     if (changes.textToDisplay && changes.textToDisplay.currentValue) {
       this.resetCart();
       this.itemsInCart = this.formatTextData(
