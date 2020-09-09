@@ -4,6 +4,7 @@ export interface ShoppingCartItem {
   quantity: number;
   salesTax: number;
   importTax: number;
+  priceAfterTax: number;
 }
 
 export interface SalesTaxAndTotal {

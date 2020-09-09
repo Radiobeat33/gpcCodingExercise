@@ -21,6 +21,7 @@ export class ShoppingCartItemsComponent implements OnInit, OnChanges {
   ngOnInit(): void {}
 
   ngOnChanges(changes: any): void {
+    console.log('change tho', changes);
     if (changes.textToDisplay && changes.textToDisplay.currentValue) {
       this.resetCart();
       this.itemsInCart = this.formatTextData(
@@ -65,7 +66,7 @@ export class ShoppingCartItemsComponent implements OnInit, OnChanges {
       const importTax = Number(
         name.includes('imported') ? importTaxTwoDecimals : 0
       );
-      const priceAfterTax = price + salesTax + importTax;
+      const priceAfterTax = Number((price + salesTax + importTax).toFixed(2));
       this.totalsFromItems = [
         {
           salesTax: this.totalsFromItems[0].salesTax += Number(

@@ -8,9 +8,8 @@ describe('TextDropComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TextDropComponent ]
-    })
-    .compileComponents();
+      declarations: [TextDropComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
